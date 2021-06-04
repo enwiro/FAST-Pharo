@@ -21,12 +21,12 @@ FASTPharoArrayExpression >> addContent: anObject [
 
 { #category : #accessing }
 FASTPharoArrayExpression >> contents [
-	"Relation named: #contents type: #FASTExpression opposite: #pharoArrayExpressionExpressionOwner"
+	"Relation named: #contents type: #FASTTExpression opposite: #pharoArrayExpressionExpressionOwner"
 
 	<generated>
 	<FMComment: 'The expression in the array'>
 	<derived>
-	<FMProperty: #contents type: #FASTExpression opposite: #pharoArrayExpressionExpressionOwner>
+	<FMProperty: #contents type: #FASTTExpression opposite: #pharoArrayExpressionExpressionOwner>
 	^ self attributeAt: #contents ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoArrayExpressionExpressionOwner: ]
 ]
 

@@ -1,13 +1,15 @@
 Class {
 	#name : #FASTPharoByteArrayLiteral,
-	#superclass : #FASTLiteral,
+	#superclass : #FASTPharoEntity,
+	#traits : 'FASTTLiteral',
+	#classTraits : 'FASTTLiteral classTrait',
 	#category : #'FAST-Pharo-Model-Entities'
 }
 
 { #category : #meta }
 FASTPharoByteArrayLiteral class >> annotation [
 
-	<FMClass: #ByteArrayLiteral super: #FASTLiteral>
+	<FMClass: #ByteArrayLiteral super: #FASTPharoEntity>
 	<package: #'FAST-Pharo-Model'>
 	<generated>
 	^self
@@ -21,12 +23,12 @@ FASTPharoByteArrayLiteral >> addContent: anObject [
 
 { #category : #accessing }
 FASTPharoByteArrayLiteral >> contents [
-	"Relation named: #contents type: #FASTExpression opposite: #pharoByteArrayLiteralExpressionExpressionOwner"
+	"Relation named: #contents type: #FASTTExpression opposite: #pharoByteArrayLiteralExpressionExpressionOwner"
 
 	<generated>
 	<FMComment: 'The expression in the array'>
 	<derived>
-	<FMProperty: #contents type: #FASTExpression opposite: #pharoByteArrayLiteralExpressionExpressionOwner>
+	<FMProperty: #contents type: #FASTTExpression opposite: #pharoByteArrayLiteralExpressionExpressionOwner>
 	^ self attributeAt: #contents ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoByteArrayLiteralExpressionExpressionOwner: ]
 ]
 

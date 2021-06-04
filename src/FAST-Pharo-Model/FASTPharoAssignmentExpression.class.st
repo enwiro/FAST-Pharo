@@ -15,11 +15,11 @@ FASTPharoAssignmentExpression class >> annotation [
 
 { #category : #accessing }
 FASTPharoAssignmentExpression >> expression [
-	"Relation named: #expression type: #FASTExpression opposite: #pharoParentAssignmentExpression"
+	"Relation named: #expression type: #FASTTExpression opposite: #pharoParentAssignmentExpression"
 
 	<generated>
 	<FMComment: 'Assigned expression (rhs of assignement)'>
-	<FMProperty: #expression type: #FASTExpression opposite: #pharoParentAssignmentExpression>
+	<FMProperty: #expression type: #FASTTExpression opposite: #pharoParentAssignmentExpression>
 	^ self attributeAt: #expression ifAbsent: [ nil ]
 ]
 
@@ -46,11 +46,11 @@ FASTPharoAssignmentExpression >> expressionGroup [
 
 { #category : #accessing }
 FASTPharoAssignmentExpression >> variable [
-	"Relation named: #variable type: #FASTVariableExpression opposite: #pharoParentAssignmentExpression"
+	"Relation named: #variable type: #FASTTVariableExpression opposite: #pharoParentAssignmentExpression"
 
 	<generated>
 	<FMComment: 'An assigned variable (lhs of assignement)'>
-	<FMProperty: #variable type: #FASTVariableExpression opposite: #pharoParentAssignmentExpression>
+	<FMProperty: #variable type: #FASTTVariableExpression opposite: #pharoParentAssignmentExpression>
 	^ self attributeAt: #variable ifAbsent: [ nil ]
 ]
 

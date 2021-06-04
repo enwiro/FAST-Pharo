@@ -1,7 +1,7 @@
-Extension { #name : #FASTStatement }
+Extension { #name : #FASTTStatement }
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTStatement >> pharoBlockStatementOwner [
+FASTTStatement >> pharoBlockStatementOwner [
 	"Relation named: #pharoBlockStatementOwner type: #FASTPharoBlockDefinition opposite: #statements"
 
 	<generated>
@@ -12,14 +12,14 @@ FASTStatement >> pharoBlockStatementOwner [
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTStatement >> pharoBlockStatementOwner: anObject [
+FASTTStatement >> pharoBlockStatementOwner: anObject [
 
 	<generated>
 	self attributeAt: #pharoBlockStatementOwner put: (FMMultivalueLink on: self update: #statements from: self pharoBlockStatementOwner to: anObject).
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTStatement >> pharoMethodStatementOwner [
+FASTTStatement >> pharoMethodStatementOwner [
 	"Relation named: #pharoMethodStatementOwner type: #FASTPharoMethodEntity opposite: #statements"
 
 	<generated>
@@ -30,7 +30,7 @@ FASTStatement >> pharoMethodStatementOwner [
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTStatement >> pharoMethodStatementOwner: anObject [
+FASTTStatement >> pharoMethodStatementOwner: anObject [
 
 	<generated>
 	self attributeAt: #pharoMethodStatementOwner put: (FMMultivalueLink on: self update: #statements from: self pharoMethodStatementOwner to: anObject).

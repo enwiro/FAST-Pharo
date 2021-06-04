@@ -1,6 +1,8 @@
 Class {
 	#name : #FASTPharoBlockDefinition,
-	#superclass : #FASTBehaviouralEntity,
+	#superclass : #FASTPharoEntity,
+	#traits : 'FASTTBehaviouralEntity',
+	#classTraits : 'FASTTBehaviouralEntity classTrait',
 	#instVars : [
 		'#blockExpression => FMOne type: #FASTPharoBlockExpression opposite: #block'
 	],
@@ -10,7 +12,7 @@ Class {
 { #category : #meta }
 FASTPharoBlockDefinition class >> annotation [
 
-	<FMClass: #BlockDefinition super: #FASTBehaviouralEntity>
+	<FMClass: #BlockDefinition super: #FASTPharoEntity>
 	<package: #'FAST-Pharo-Model'>
 	<generated>
 	^self
@@ -55,12 +57,12 @@ FASTPharoBlockDefinition >> blockExpressionGroup [
 
 { #category : #accessing }
 FASTPharoBlockDefinition >> localVariables [
-	"Relation named: #localVariables type: #FASTVariableExpression opposite: #pharoBlockDefinitionVariableEntityOwner"
+	"Relation named: #localVariables type: #FASTTVariableExpression opposite: #pharoBlockDefinitionVariableEntityOwner"
 
 	<generated>
 	<FMComment: 'The local variables of the block'>
 	<derived>
-	<FMProperty: #localVariables type: #FASTVariableExpression opposite: #pharoBlockDefinitionVariableEntityOwner>
+	<FMProperty: #localVariables type: #FASTTVariableExpression opposite: #pharoBlockDefinitionVariableEntityOwner>
 	^ self attributeAt: #localVariables ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoBlockDefinitionVariableEntityOwner: ]
 ]
 
@@ -80,12 +82,12 @@ FASTPharoBlockDefinition >> localVariablesGroup [
 
 { #category : #accessing }
 FASTPharoBlockDefinition >> statements [
-	"Relation named: #statements type: #FASTStatement opposite: #pharoBlockStatementOwner"
+	"Relation named: #statements type: #FASTTStatement opposite: #pharoBlockStatementOwner"
 
 	<generated>
 	<FMComment: 'The statements of the method'>
 	<derived>
-	<FMProperty: #statements type: #FASTStatement opposite: #pharoBlockStatementOwner>
+	<FMProperty: #statements type: #FASTTStatement opposite: #pharoBlockStatementOwner>
 	^ self attributeAt: #statements ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoBlockStatementOwner: ]
 ]
 

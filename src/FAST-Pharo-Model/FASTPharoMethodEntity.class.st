@@ -1,15 +1,15 @@
 Class {
 	#name : #FASTPharoMethodEntity,
-	#superclass : #FASTNamedBehaviouralEntity,
-	#traits : 'FamixTHasImmediateSource',
-	#classTraits : 'FamixTHasImmediateSource classTrait',
+	#superclass : #FASTPharoEntity,
+	#traits : 'FASTTNamedBehaviouralEntity + FamixTHasImmediateSource',
+	#classTraits : 'FASTTNamedBehaviouralEntity classTrait + FamixTHasImmediateSource classTrait',
 	#category : #'FAST-Pharo-Model-Entities'
 }
 
 { #category : #meta }
 FASTPharoMethodEntity class >> annotation [
 
-	<FMClass: #MethodEntity super: #FASTNamedBehaviouralEntity>
+	<FMClass: #MethodEntity super: #FASTPharoEntity>
 	<package: #'FAST-Pharo-Model'>
 	<generated>
 	^self
@@ -29,12 +29,12 @@ FASTPharoMethodEntity >> addStatement: anObject [
 
 { #category : #accessing }
 FASTPharoMethodEntity >> localVariables [
-	"Relation named: #localVariables type: #FASTVariableExpression opposite: #pharoMethodVariableEntityOwner"
+	"Relation named: #localVariables type: #FASTTVariableExpression opposite: #pharoMethodVariableEntityOwner"
 
 	<generated>
 	<FMComment: 'The local variables of the method'>
 	<derived>
-	<FMProperty: #localVariables type: #FASTVariableExpression opposite: #pharoMethodVariableEntityOwner>
+	<FMProperty: #localVariables type: #FASTTVariableExpression opposite: #pharoMethodVariableEntityOwner>
 	^ self attributeAt: #localVariables ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoMethodVariableEntityOwner: ]
 ]
 
@@ -54,12 +54,12 @@ FASTPharoMethodEntity >> localVariablesGroup [
 
 { #category : #accessing }
 FASTPharoMethodEntity >> statements [
-	"Relation named: #statements type: #FASTStatement opposite: #pharoMethodStatementOwner"
+	"Relation named: #statements type: #FASTTStatement opposite: #pharoMethodStatementOwner"
 
 	<generated>
 	<FMComment: 'The statements of the method'>
 	<derived>
-	<FMProperty: #statements type: #FASTStatement opposite: #pharoMethodStatementOwner>
+	<FMProperty: #statements type: #FASTTStatement opposite: #pharoMethodStatementOwner>
 	^ self attributeAt: #statements ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoMethodStatementOwner: ]
 ]
 

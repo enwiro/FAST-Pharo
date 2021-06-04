@@ -1,7 +1,7 @@
-Extension { #name : #FASTVariableExpression }
+Extension { #name : #FASTTVariableExpression }
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTVariableExpression >> pharoBlockDefinitionVariableEntityOwner [
+FASTTVariableExpression >> pharoBlockDefinitionVariableEntityOwner [
 	"Relation named: #pharoBlockDefinitionVariableEntityOwner type: #FASTPharoBlockDefinition opposite: #localVariables"
 
 	<generated>
@@ -12,14 +12,14 @@ FASTVariableExpression >> pharoBlockDefinitionVariableEntityOwner [
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTVariableExpression >> pharoBlockDefinitionVariableEntityOwner: anObject [
+FASTTVariableExpression >> pharoBlockDefinitionVariableEntityOwner: anObject [
 
 	<generated>
 	self attributeAt: #pharoBlockDefinitionVariableEntityOwner put: (FMMultivalueLink on: self update: #localVariables from: self pharoBlockDefinitionVariableEntityOwner to: anObject).
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTVariableExpression >> pharoMethodVariableEntityOwner [
+FASTTVariableExpression >> pharoMethodVariableEntityOwner [
 	"Relation named: #pharoMethodVariableEntityOwner type: #FASTPharoMethodEntity opposite: #localVariables"
 
 	<generated>
@@ -30,14 +30,14 @@ FASTVariableExpression >> pharoMethodVariableEntityOwner [
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTVariableExpression >> pharoMethodVariableEntityOwner: anObject [
+FASTTVariableExpression >> pharoMethodVariableEntityOwner: anObject [
 
 	<generated>
 	self attributeAt: #pharoMethodVariableEntityOwner put: (FMMultivalueLink on: self update: #localVariables from: self pharoMethodVariableEntityOwner to: anObject).
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTVariableExpression >> pharoParentAssignmentExpression [
+FASTTVariableExpression >> pharoParentAssignmentExpression [
 	"Relation named: #pharoParentAssignmentExpression type: #FASTPharoAssignmentExpression opposite: #variable"
 
 	<generated>
@@ -49,7 +49,7 @@ FASTVariableExpression >> pharoParentAssignmentExpression [
 ]
 
 { #category : #'*FAST-Pharo-Model-accessing' }
-FASTVariableExpression >> pharoParentAssignmentExpression: anObject [
+FASTTVariableExpression >> pharoParentAssignmentExpression: anObject [
 
 	<generated>
 	(self attributeAt: #pharoParentAssignmentExpression ifAbsentPut: [nil]) == anObject ifTrue: [ ^ anObject ].

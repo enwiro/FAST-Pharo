@@ -1,6 +1,8 @@
 Class {
 	#name : #FASTPharoMessageSend,
-	#superclass : #FASTExpression,
+	#superclass : #FASTPharoEntity,
+	#traits : 'FASTTExpression',
+	#classTraits : 'FASTTExpression classTrait',
 	#instVars : [
 		'#kind => FMProperty',
 		'#selector => FMOne type: #FASTPharoSelector opposite: #parentMessageSend',
@@ -12,7 +14,7 @@ Class {
 { #category : #meta }
 FASTPharoMessageSend class >> annotation [
 
-	<FMClass: #MessageSend super: #FASTExpression>
+	<FMClass: #MessageSend super: #FASTPharoEntity>
 	<package: #'FAST-Pharo-Model'>
 	<generated>
 	^self
@@ -26,12 +28,12 @@ FASTPharoMessageSend >> addArgument: anObject [
 
 { #category : #accessing }
 FASTPharoMessageSend >> arguments [
-	"Relation named: #arguments type: #FASTExpression opposite: #pharoMessageArgumentOwner"
+	"Relation named: #arguments type: #FASTTExpression opposite: #pharoMessageArgumentOwner"
 
 	<generated>
 	<FMComment: 'The arguments of the message'>
 	<derived>
-	<FMProperty: #arguments type: #FASTExpression opposite: #pharoMessageArgumentOwner>
+	<FMProperty: #arguments type: #FASTTExpression opposite: #pharoMessageArgumentOwner>
 	^ self attributeAt: #arguments ifAbsentPut: [ FMMultivalueLink on: self opposite: #pharoMessageArgumentOwner: ]
 ]
 
@@ -90,11 +92,11 @@ FASTPharoMessageSend >> kind: anObject [
 
 { #category : #accessing }
 FASTPharoMessageSend >> receiver [
-	"Relation named: #receiver type: #FASTExpression opposite: #pharoMessageReceiver"
+	"Relation named: #receiver type: #FASTTExpression opposite: #pharoMessageReceiver"
 
 	<generated>
 	<FMComment: 'The receiver of the selector'>
-	<FMProperty: #receiver type: #FASTExpression opposite: #pharoMessageReceiver>
+	<FMProperty: #receiver type: #FASTTExpression opposite: #pharoMessageReceiver>
 	^ self attributeAt: #receiver ifAbsent: [ nil ]
 ]
 
